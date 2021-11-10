@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    border: 0;
+    outline: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+    padding: 20px;
+}
+
+/* As variáveis abaixo são as cores principais do formulário. */
+
+:root {
+    --cor-fundo: rgb(32, 32, 32);
+    --cor-form: #f1f1f1;
+    --cor-principal: rgb(98, 0, 255);
+    --cor-secundaria: rgb(97, 6, 158);
+    --borda-principal: rgb(102, 5, 182);
+}
+
+/* --------- CADASTRO ------------*/
+
+.cadastro {
+    max-width: 900px;
+    background-color: var(--cor-form);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.cadastro, #cadastro__form, .form__campo {
+    width: 100%;
+}
+
+.cadastro__titulo {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin: 0 0 10px 0;
+}
+
+#cadastro__form label {
+    font-size: 15px;
+}
+
+.form__campo {
+    border-radius: 5px;
+    border: 1px solid rgb(207, 207, 207);
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+    background-color:white;
+    transition: 0.3s;
+    display: block;
+}
+
+.form__campo:focus {
+    border: 1px solid var(--cor-principal);
+}
+
+.form__descricao {
+    resize: none;
+}
+
+.campo--inline {
+    display: inline-block;
+    margin-right: -2px;
+    width: 50%;
+}
+
+.form__episodios {
+    width: 95%;
+}
+
+.btn__enviar {
+    cursor: pointer;
+    border: 1px solid var(--borda-principal);
+    border-radius: 5px;
+    width: 28%;
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    background-color: var(--cor-principal);
+    transition: 0.15s;
+}
+
+.btn__enviar:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.form__nome--erro {
+    border-color:red;
+}
+
+.form__nome--erro::placeholder {
+    color: red;
+}
+
+.campo--erro {
+    color: red;
+    display: none;
+    margin: 10px 0;
+}
+
+/* ---------------------------- */
+
+/* ------ RESPONSIVO -----------*/
+
+@media screen and (max-width: 740px) {
+    .campo--inline {
+        display: block;
+        width: 100%;
+    }
+
+    .form__episodios {
+        width: 100%;
+    }
+    .btn__enviar {
+        width: 100%;
+    }
+}

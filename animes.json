@@ -1,0 +1,19 @@
+{
+    "animes": [
+      {
+        "nome": "Noragami",
+        "descricao": "Yato lindo e maravilhoso",
+        "video": "alguma coisa",
+        "episodios": 20,
+        "data": "YYYY-MM-DD"
+      },
+      {
+        "nome": "Hunter X Hunter",
+        "descricao": "Passo pano pro Hisokinha",
+        "video": "alguma coisa",
+        "episodios": 20,
+        "data": "YYYY-MM-DD"
+      }
+    ]
+}
+  

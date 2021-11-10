@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Animes</title>
+
+    <!--Arquivos de estilo-->
+    <link href="style.css" rel="stylesheet">
+
+    <!--Fontes de texto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+        <section class="cadastro">
+            <h2 class="cadastro__titulo">Cadastrar animes</h2>
+            <form id="cadastro__form" action="#">
+                <div>
+                    <label for="nome">
+                        Nome do anime:
+                        <span class="nome--erro campo--erro"></span>
+                    </label>
+                    <input 
+                        class="form__campo"
+                        type="text"  
+                        id="nome"
+                        name="nome" 
+                        placeholder="Digite o nome do anime" 
+                        autocomplete="off"
+                        spellcheck="false" 
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label for="descricao">
+                        Descrição:
+                        <span class="descricao--erro campo--erro"></span>
+                    </label>
+                    <textarea 
+                        class="form__campo form__descricao" 
+                        id="descricao"
+                        name="descricao" 
+                        placeholder="Digite a descrição do anime" 
+                        autocomplete="off"
+                        resized="false" 
+                        spellcheck="true"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="campo--inline">
+                    <label for="episodios">
+                        Quantidade de episódios:
+                        <span class="episodios--erro campo--erro"></span>
+                    </label>
+                    <input
+                        class="form__campo form__episodios" 
+                        id="episodios" 
+                        name="episodios"
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                        required
+                    />
+                </div>
+
+                <div class="campo--inline">
+                    <label for="data">
+                        Data de lançamento:
+                        <span class="data--erro campo--erro"></span>
+                    </label>
+                    <input
+                        class="form__campo form__data" 
+                        id="data" 
+                        type="date"
+                        name="data"
+                        min="1958-10-22"
+                        max="2040-12-31"
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label for="video">
+                        Vídeo promocional (.mp4):
+                        <span class="video--erro campo--erro"></span>
+                    </label>
+                    <input
+                        class="form__campo" 
+                        id="video" 
+                        name="video" 
+                        type="file"
+                        accept=".mp4" 
+                        required    
+                    >    
+                </div>
+
+                <div>
+                    <label for="imagem">
+                        Imagem de thumbnail (.jpg, .jpeg):
+                        <span class="imagem--erro campo--erro"></span>
+                    </label>
+                    <input
+                        class="form__campo"  
+                        id="imagem" 
+                        name="imagem" 
+                        type="file"
+                        accept=".jpg,.jpeg"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="btn__enviar" class="btn__enviar">Cadastrar Anime</button>
+            </form>
+    </div>
+
+    <script src="js/validacoes.js"></script>
+    <script src="js/conexao.js"></script>
+    <script src="js/adiciona-anime.js"></script>
+
+</body>
+</html>
